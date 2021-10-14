@@ -1,17 +1,20 @@
 
 const contactForm = document.getElementById("contact-form");
 const submitLoader = document.getElementById("submit-loader");
+const messageWarning = document.getElementById("message-warning");
+const messageSuccess = document.getElementById("message-success");
+const formEndpoint   = 'https://formspree.io/f/mrgrvzqw';
 
 submitLoader.style.opacity = 0;
+messageSuccess.style.opacity = 0;
 
 contactForm.addEventListener('submit', function( event ) {
   event.preventDefault();
 
   const formData = new FormData(this);  // creating a class from the form's data.
-  const formEndpoint = 'https://formspree.io/f/mrgrvzqw';
 
   // fade in
-  fadeIn(submitLoader, 3000);
+  fadeIn(submitLoader, 1500);
 
 //fetch('sendEmail.php', {
   fetch(formEndpoint, {
@@ -23,11 +26,16 @@ contactForm.addEventListener('submit', function( event ) {
       return response.text();
 
     }).then(function( text ) {
+      messageWarning.style.opacity = 0;
       fadeOut(submitLoader);
+      fadeOut(contactForm);
+      fadeIn(messageSuccess, 2000);
       console.log( text );
 
     }).catch(function( error ) {
       fadeOut(submitLoader);
+      messageWarning.innerHTML(error);
+      fadeIn(messageWarning, 1000);
       console.error(error);
     })
 });
