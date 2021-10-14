@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Mark Watson | Full Stack Developer | Sydney Australia </title>
+  
+  <link rel="stylesheet" type="text/css" media="screen" href="./css/style.css?ver=1.2" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@700&family=Lato:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+
+</head>
+
+<body class="l-body">
+  <div class="l-wrapper">
+    <header class="b-site-header">
+  <span class="b-site-logo">MW</span>
+  <nav class="b-site-nav">
+    <a class="b-site-nav__link" href="./index.html">About</a>
+    <a class="b-site-nav__link" href="./works.html">Works</a>
+    <a class="b-site-nav__link" href="./contact.html">Contact</a>
+    
+    <button class="b-site--theme-control b-icon icon-sun" id="theme-control">
+      <span class="b-site--theme-text">dim lights?</span>
+    </button>
+  </nav>
+</header>
+
+  <main role="main" class="l-main b-page">
+
+    <h1 class="b-page__title">Get in Touch</h1>
+    
+    <div class="b-page__content">
+        
+      <h1 id="say-hello">Some ways to contact me...</h1>
+
+      <p>Please send me a message,  
+        I've provided the form below that automatically sends your email to me. 
+        Just remember to provide your name, your email address, a subject and a concise
+        message so I can promptly respond back to you.
+        You can also send me a message using your own email client at 
+        <code>hi@watsonised.com</code>.
+      </p>
+
+      <div class="l-grid l-grid--two">
+
+        <form id="contact-form" class="b-form" method="post">
+
+          <div class="b-field">
+            <input type="text" name="sender" id="sender" class="b-field__input" placeholder="name: your name" value="" minlength="2" required="" />
+          </div>
+
+          <div class="b-field">
+            <input type="email" name="sender-email" id="sender-email" class="b-field__input" placeholder="email: your email address" value="" required="" />
+          </div>
+
+          <div class="b-field">
+            <input type="text" name="subject" id="sender-subject" class="b-field__input" placeholder="subject: reason for emailing me?" value="" required="" />
+          </div>
+
+          <div class="b-field">
+            <textarea id="message" name="message" rows="5" cols="33" class="b-field__input" placeholder="message: what would you like to say?" required=""></textarea>  
+          </div>
+
+          <button type="submit" class="b-form__submit">Send Message</button>
+
+          <div id="submit-loader">
+            <div class="text-loader">Sending...</div>                             
+            <div class="s-loader">
+              <div class="bounce1"></div>
+              <div class="bounce2"></div>
+              <div class="bounce3"></div>
+            </div>
+          </div>
+
+        </form>
+
+          <div id="message-warning"></div> 
+          <div id="message-success">
+            <i class=""></i>Your message was sent, thank you!<br>
+          </div>
+      </div>
+  
+      <footer class="b-site-footer" id="contact">
+        <p>Let's chat</p>
+        <dl class="b-social">
+          <div class="b-social__container">
+            <dt class="b-social__type">Email:</dt>
+            <dd class="b-social__handle">hi@watsonised.com</dd>
+          </div>
+          <div class="b-social__container">
+            <dt class="b-social__type">LinkedIn:</dt>
+            <dd class="b-social__handle"><a href="https://www.linkedin.com/in/mark-watsonised/">LinkedIn</a></dd>
+          </div>
+          <div class="b-social__container">
+            <dt class="b-social__type">Github:</dt>
+            <dd class="b-social__handle"><a href="https://github.com/Mark33Mark">GitHub</a></dd>
+          </div>
+        </dl>
+      </footer>
+    </div>
+  </main>
+</body>
+
+  
+  <script type="text/javascript" src="./js/main.js?ver=1.1"></script>
+  <script type="text/javascript" src="./js/contact.js"></script>
+
+</html>
