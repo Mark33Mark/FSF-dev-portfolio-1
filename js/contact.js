@@ -16,6 +16,7 @@ contactForm.addEventListener('submit', function( event ) {
 //fetch('sendEmail.php', {
   fetch(formEndpoint, {
       method: 'post',
+      mode: "no-cors",
       body: formData
 
     }).then( function ( response ) {
