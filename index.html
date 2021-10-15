@@ -3,21 +3,51 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
     <title>Mark Watson | Full Stack Developer | Sydney Australia</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@700&family=Lato:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <!--- basic page needs and meta to boost SEO
+    ================================================== -->
+    <meta charset="utf-8">
+		<title>Mark Watson | Watsonised | developer</title>
+		<meta name="description" content="Mark Watson - developer and creator in the digital realm - web and devices" />  
+		<meta name="author" content="Mark Watson" />
+		<meta name="KEYWORDS" content="front end web developer, front-end web developer, full stack developer, 
+                                    social media, graphic design, analysis, database, 
+                                    e-commerce, website, web design, web designer, grahic design  
+                                    ui designer, ux designer, ui, ux, 
+                                    curriculum vitae web developer, resume web developer" />
 
+    <!-- Open Graph data
+    ================================================== -->
+    <meta property="og:title" content="Mark Watson" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://www.watsonised.com/content/SVG_MarkWatson.svg" />
+    <meta property="og:image:width" content="150" />
+    <meta property="og:image:height" content="150" />
+    <meta property="og:site_name" content="Mark Watson web developer"/>
+    <meta property="og:description" content="Mark Watson is a creative and talented computer programmer and web developer." />
+
+    <!-- fonts
+    ================================================== -->  
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@700&family=Lato:wght@400;700&family=Sarabun:wght@700&display=swap" 
+          rel="stylesheet" />
+
+    <link rel="shortcut icon" href="img/favicon.ico?ver=1.0" type="image/x-icon" />
+
+    <!-- CSS
+    ================================================== -->  
     <link rel="stylesheet" type="text/css" media="screen" href="./css/style.css?ver=1.2" />
+
   </head>
 
   <body class="l-body">
     <div class="l-wrapper">
       <header class="b-site-header">
-        <span class="b-site-logo">MW</span>
+        <a class="b-logo" href="doc/resume_MarkWatson.pdf" target="_blank"><img src="img/Logo.svg" /></a>
         <nav class="b-site-nav">
           <a class="b-site-nav__link" href="./index.html">About</a>
           <a class="b-site-nav__link" href="./works.html">Works</a>
@@ -33,38 +63,75 @@
       <main role="main" class="l-main b-page">
     
         <section class="b-intro">
-          <h1 class="b-intro__greeting">Hello and welcome,<br /> I&#39;m Mark!</h1>
-          <p>A full stack web developer </p>
-          <p>Currently </p>
-    
-          <h2 id="i-m-also">I also…</h2>
+
+          <h1 class="b-intro__greeting">Hello and welcome,<br /> I&#39;m Mark</h1>
+
+          <section class="stage">
+            <figure class="ball bubble">
+              <span class="shadow"></span>
+            </figure>
+          </section>
+        </section>
+        <div id="quote-me"></div>
+
+          <p> A full stack web developer.
+          <p> Coming from a background of doing property development and capital transactions for large public listed companies.</p> 
+          <p> Based in Sydney, Australia.</p>
+          <p> From a strong interest in electronics I have developed a deep understanding with how to make those bits and bytes 
+              dance to the required rhythm.</p>
+          <p> Using my creativity I can develop intuitive user experiences for the web.</p>  
+          <p> Currently completing a certificate in full stack web development at the University of Sydney, 
+              to further advance my skills in developing responsive and accessible web designs using JavaScript, 
+              Node.js, React.js, CSS, SQL, Python, API's and C language.</p>
+          <p> I work well in agile development teams using Git.  I can deliver on well to either well articulated or high level briefs. </p>
+            
+          <h2 id="i-m-also">Enjoys…</h2>
     
           <ul>
-          <li> </li>
-          <li> </li>
-          <li> </li>
+            <li>Building sensor driven devices using Arduino that wirelessly upload data to a user’s sql database. </li>
+            <li>Powerlifts and rockclimbs - when he can.</li>
+            <li>Biohacking to optimise life.</li>
           </ul>
             
-        </section>
+
       </main>
 
-      <footer class="b-site-footer" id="contact">
-    
-        <dl class="b-social">
-          <div class="b-social__container">
-            <dt class="b-social__type">Email:</dt>
-            <dd class="b-social__handle">hi@watsonised.com</dd>
-          </div>
-          <div class="b-social__container">
-            <dt class="b-social__type">LinkedIn:</dt>
-            <dd class="b-social__handle"><a href="https://www.linkedin.com/in/mark-watsonised/">LinkedIn</a></dd>
-          </div>
-          <div class="b-social__container">
-            <dt class="b-social__type">Github:</dt>
-            <dd class="b-social__handle"><a href="https://github.com/Mark33Mark">GitHub</a></dd>
-          </div>
-        </dl>
-      </footer>
+      <section class="b-social__container">
+        <!--  adding my mobile phone number this way for search engines to 
+              find it easier, method grabbed from:
+              http://thenewcode.com/536/Adding-Phone-Numbers-To-Web-Pages-With-HTML5-and-Microdata 
+          -->
+        <address class="social-network" itemscope itemtype="http://schema.org/LocalBusiness"> 
+          <div class = "hide-me" itemprop="name">Mark Watson | Web Developer</div>
+          <span itemprop="telephone" class="my-mobile-number">
+            <a href="tel:+61448488884">
+              <div class="icon-mobile-phone" style="font-size: 4rem; display: inline-block; margin: 0 1rem;""></div>
+            </a>
+          </span>
+
+        <a  href="mailto:hi@watsonised.com?subject=Sending%20you%20this%20email%20from%20your%20website&body=Hi%20Mark,%20I'm%20emailing%20you%20from%20your%20website." 
+            aria-label="send me an email by selecting this icon">
+          <div class="icon-SVG_Envelope_tight" style="font-size: 3rem; display: inline-block; margin: 0 1rem;""></div>
+        </a>
+            
+        <a href="https://www.linkedin.com/in/mark-watsonised/" target="_blank" aria-label="have a look at my LinkedIn message and contact me by selecting this icon">
+          <div class="icon-SVG_Linkedin" style="font-size:4rem; display: inline-block; margin: 0 1rem;""></div>
+        </a>
+          
+        <a  href="https://wa.me/61448488884?text=Hi%20Mark,%0DI%20found%20you%20via%20your%20website%20and%20was%20wondering%0D" 
+            target="_blank" aria-label="send me a whatsapp message by selecting this icon">
+          <div class="icon-SVG_Whatsapp" style="font-size: 4rem; display: inline-block; margin: 0 1rem;""></div>
+        </a>  <!--https://faq.whatsapp.com/general/chats/how-to-use-click-to-chat-->
+
+        <a href="https://t.me/watsonised" target="_blank" aria-label="send me a Telegram message by selecting this icon">
+          <div class="icon-SVG_PaperPlane" style="font-size: 4rem; display: inline-block; margin: 0 1rem;"></div>
+        </a>
+
+        <a href="https://github.com/Mark33Mark" target="_blank" aria-label="have a look at my Github repository by selecting this icon">
+          <div class="icon-SVG_Github" style="font-size: 6rem; display: inline-block; margin: 0 1rem;""></div>
+        </a> 
+        </address>
+      </section>
     </div>
     
   </body>

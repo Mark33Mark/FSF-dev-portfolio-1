@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   version="1.1"
+   id="svg824"
+   width="230"
+   height="230"
+   viewBox="0 0 230 230"
+   sodipodi:docname="Logo.svg"
+   inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs828" />
+  <sodipodi:namedview
+     id="namedview826"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="true"
+     showgrid="false"
+     inkscape:zoom="2.9022122"
+     inkscape:cx="74.08142"
+     inkscape:cy="138.51503"
+     inkscape:window-width="2166"
+     inkscape:window-height="1092"
+     inkscape:window-x="1009"
+     inkscape:window-y="136"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg824" />
+  <path
+     d="m 197.29402,60.619835 -29.10489,0.08614 0.58121,63.064345 -29.30088,-22.13364 -56.56125,45.23285 0.26209,35.92475 56.97124,-45.55081 56.85845,46.46992 z M 53.35871,105.62158 82.21989,130 139.4036,83.403602 139.28178,47.374924 82.05502,92.054062 24.49675,46.362872 25.03171,168.5056 54.13453,168.03815 Z"
+     style="display:none;fill:#ffffff;fill-opacity:1"
+     id="path9056"
+     inkscape:label="letters" />
+  <path
+     style="display:inline;fill:#60a2fd"
+     d="M 0,115 V 0 H 115 230 V 115 230 H 115 0 Z m 197.29402,-54.380165 -29.10489,0.08614 0.58121,63.064345 -29.30089,-22.13364 -56.561233,45.23285 0.262091,35.92475 56.971242,-45.5508 L 197,183.71339 Z M 53.358717,105.62158 82.219898,130 139.4036,83.403602 139.28178,47.374924 82.05503,92.054062 24.496754,46.362872 25.031722,168.5056 54.134534,168.03814 Z"
+     id="path1014"
+     sodipodi:nodetypes="ccccccccccccccccccccccccccc"
+     inkscape:label="background_block" />
+  <g
+     inkscape:groupmode="layer"
+     inkscape:label="Image"
+     id="g830"
+     style="display:inline" />
+</svg>
