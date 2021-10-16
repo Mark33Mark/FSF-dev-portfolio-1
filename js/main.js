@@ -35,10 +35,42 @@ toggle.addEventListener( "click", function ( event ) {
   }
 });
 
+/* =========================================================================================== */
+// Found at: https://www.creativebloq.com/inspiration/css-animation-examples
+// Part of my exploration of fun animation effects.
+const moveableEl = document.getElementById("movable");
+
+let handleMouseMove = e => {
+  const height = window.innerHeight;
+  const width = window.innerWidth;
+  const yAxisDegree = e.pageX / width * 100 - 20;
+  const xAxisDegree = e.pageY / height * -1 * 80 + 20;
+
+  moveableEl.style.transform = `rotateY(${yAxisDegree}deg) rotateX(${xAxisDegree}deg)`;
+  // Set the sheen position
+  setSheenPosition(e.pageX / width, e.pageY / width);
+}
+
+function setSheenPosition(xRatio, yRatio) {
+ 
+  // This creates a "distance" up to 400px each direction to offset the sheen
+  const xOffset = 1 - (xRatio - 0.5) * 800;
+  const yOffset = 1 - (yRatio - 0.5) * 800;
+ 
+  moveableEl.style.setProperty('--sheenX', `${xOffset}px`);
+  moveableEl.style.setProperty('--sheenY', `${yOffset}px`);
+}
+
+let clearCoOrdinates = () =>{
+  const xReset = 0;
+  const yReset = 0;
+
+  moveableEl.style.transform = `rotateY(${yReset}deg) rotateX(${xReset}deg)`;
+}
 
 /* =========================================================================================== */
 
-const aQuote       = document.getElementById("quote-me");
+const aQuote       = document.getElementById("b-quote-me");
 let quotesCalled = []; 
 
 let quoteGenerator = () => {
@@ -63,7 +95,7 @@ let quoteGenerator = () => {
 
           console.log(`Random number returned = ${selectedQuote}`);
 
-          let html = `<blockquote class="animate-fading">"${data[selectedQuote].text}
+          let html = `<blockquote class="b-vertical-centre animate-fading">"${data[selectedQuote].text}
           <br />quoting: ${data[selectedQuote].author}</blockquote>`;
           aQuote.innerHTML = html;
 
@@ -76,7 +108,7 @@ let quoteGenerator = () => {
       let availableQuotes = quotesCalled.length;
       let selectedQuote = randomSelection( 0, availableQuotes );
 
-      let html = `<blockquote class="animate-fading">"${quotesCalled[selectedQuote].text}"
+      let html = `<blockquote class="b-vertical-centre animate-fading">"${quotesCalled[selectedQuote].text}"
       <br />quoting: ${quotesCalled[selectedQuote].author}</blockquote>`;
       aQuote.innerHTML = html;
     }, 11000);
