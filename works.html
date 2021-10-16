@@ -43,6 +43,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@700&family=Lato:wght@400;700&family=Sarabun:wght@700&display=swap" 
           rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap" rel="stylesheet" />
 
     <!-- CSS
     ================================================== -->  
@@ -69,9 +70,31 @@
     <main role="main" class="l-main b-page">
 
       <h1 class="b-page__title">Selected Work</h1>
+
+        <ul class = "project-board">
+          <li class="project-card recipe">
+            <img src="./img/lettuce_eat.jpg" width="200">
+            <p class = "picture-card"><img class = "recipe-icon" src="./img/lettuce.png" height="30" width="30">.eat</p>
+          </li>
+      
+          <li class="project-card weather"><img src="./img/weather_dash.jpg" width="200"/>
+            <p class = "picture-card">weather dash</p>
+          </li>
+      
+          <li class="project-card quiz">
+            <img src="./img/code_quiz.jpg" width="200"/>
+            <p class = "picture-card">code quiz</p>
+          </li>
+      
+          <li class="project-card workday">
+            <img src="./img/workday_scheduler.jpg" width="200"/>
+            <p class = "picture-card">workday</p>
+          </li>   
+        </ul>
+
       <div class="b-page__content"> 
 
-        <article class="b-work">
+        <article id="lettuce-eat" class="b-work">
           <header class="b-work__header">
             <h2 class="b-work__title">lettuce.eat</h2>  
             <ul class="b-tags-list">  
@@ -103,7 +126,7 @@
           <footer class="b-work__footer"></footer>
         </article>
 
-        <article class="b-work">
+        <article id="weather-dashboard" class="b-work">
           <header class="b-work__header">
             <h2 class="b-work__title">weather dashboard</h2>  
             <ul class="b-tags-list">  
@@ -135,7 +158,7 @@
           <footer class="b-work__footer"></footer>
         </article>
                 
-        <article class="b-work">
+        <article id="code-quiz" class="b-work">
           <header class="b-work__header">
             <h2 class="b-work__title">code quiz</h2>  
             <ul class="b-tags-list">  
@@ -156,6 +179,30 @@
               <li>I implemented a number of user features to make the quiz more fun, such as a countdown that 
                   loses 10 seconds when a user selects the wrong answer</li>
               <li>included a countdown bar that then turns into a progress bar.</li>
+            </ul>            
+          </div>     
+          <footer class="b-work__footer"></footer>
+        </article>
+
+        <article id="workday-scheduler" class="b-work">
+          <header class="b-work__header">
+            <h2 class="b-work__title">workday scheduler</h2>  
+            <ul class="b-tags-list">  
+              <li class="b-tag">javaScript</li>
+              <li class="b-tag">css</li>
+              <li class="b-tag">html</li>
+            </ul>  
+          </header>
+          <div class="b-work__content">
+            <p> A simple application built from scratch that allows user's to select a work day time bandwidth 
+                and set out their tasks for the day.
+            </p>
+            <p> The tasks are stored in local memory for the user to see the next workday when they open the application.</p>
+            <p>What I did:</p>
+            <ul>
+              <li>Built the application from concept.</li>
+              <li>Added user features to improve experience like right clicking to delete entries and using tab key to 
+                  automatically save the entry into local memory.</li>
             </ul>            
           </div>     
           <footer class="b-work__footer"></footer>
@@ -196,7 +243,7 @@
   </div>
 </body>
 
-  
+  <script type="text/javascript" src="./js/works.js?ver=1.1"></script>
   <script type="text/javascript" src="./js/main.js?ver=1.1"></script>
 
 </html>
