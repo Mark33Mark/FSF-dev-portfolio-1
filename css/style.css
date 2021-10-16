@@ -549,7 +549,7 @@ dd a {
 .b-logo img{
   display: block;
   width: auto;
-  height: 7vh;
+  height: 10vh;
 }
 
 /* 
@@ -607,7 +607,7 @@ dd a {
 }
 
 .b-work__title {
-  margin: 0.67em 0 0.1em;
+  margin: 2rem 0 1rem 0;
   font-family: 'Sarabun', sans-serif;
   font-size: 2.75em;
   letter-spacing: 0.01em;
@@ -706,7 +706,7 @@ dd a {
 }
 
 .b-page__title {
-  margin: 1.25em 0 1em;
+  margin: 0.5rem 0;
   font-family: 'Lato', sans-serif;
   font-size: 1.2em;
   font-weight: 400;
@@ -864,6 +864,68 @@ dd a {
 
 /* 
  * ================================================================================ 
+ *  Project Board
+ * ================================================================================ */
+
+.project-board{
+  position:relative;
+  display:flex;
+  flex-wrap:wrap;
+  align-items: center;
+  justify-content: center;
+  margin:0 1rem 0.5rem 1rem;
+  padding:0;
+}
+
+.project-card{
+  flex: 0 1 22%;
+  text-align:center;
+  display:inline-block;
+  list-style:none;
+  position:relative;
+  top:3rem;
+
+  border:solid 0.75rem rgb(215, 215, 215);
+  background:rgb(215, 215, 215);
+  box-shadow:-1rem 1rem 1rem 0.06rem #555;
+  
+  transition:all 0.7s ease;
+  -o-transition:all 0.7s ease;
+  -moz-transition:all 0.7s ease;
+  -webkit-transition:all 0.7s ease;
+}
+
+li:hover{
+  top:0;
+  z-index: 10;
+  cursor:grabbing;
+}
+
+.recipe{
+    transform:rotate(10deg);
+}
+
+.weather{
+    transform:rotate(0deg);
+}
+
+.workday{
+    transform:rotate(-10deg);
+}
+
+.quiz{
+    transform:rotate(20deg);
+}
+
+.picture-card{
+  font-family: 'Dancing Script', cursive;
+  font-size: 2rem;
+  margin: 1rem 0 0 0;
+}
+
+
+/* 
+ * ================================================================================ 
  *  Media queries
  * ================================================================================ */
 
@@ -929,6 +991,10 @@ dd a {
     font-size: 4rem;
     line-height: 1.05;
     letter-spacing: 0.2rem;
+  }
+
+  .b-logo img{
+    height: 7vh;
   }
 }
 
