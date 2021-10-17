@@ -1,15 +1,24 @@
+/*=======================================================================
+ *
+ *   Javascript 
+ *        - Script common to all 3 pages: main.html, works.html, contact.html
+ *        - This script handles a number of actions - function names adopted
+ *          descripe the function.
+ *   File created: 14 October 2021
+ *   Created by:   Mark Watson
+ *
+ *=======================================================================*/ 
 
-/* =========================================================================================== */      
-
-const toggle          = document.getElementById( "theme-control" ),
-      text            = document.querySelector( ".b-site--theme-text" );
+  
+const toggle  = document.getElementById( "theme-control" ),
+      text    = document.querySelector( ".b-site--theme-text" );
       
-let themeOff = () => {
+themeOff = () => {
 
   document.body.classList.add( "t-dark" );
   toggle.classList.remove( "icon-moon" );
   toggle.classList.add( "icon-sun" );
-  text.innerText = "lights on?";
+  text.innerHTML = `<br />lights on?`;
 }
 
 if (localStorage.getItem( "t-dark" )) {
@@ -26,7 +35,7 @@ toggle.addEventListener( "click", function ( event ) {
     document.body.classList.remove( "t-dark" );
     toggle.classList.remove( "icon-sun" );
     toggle.classList.add( "icon-moon");
-    text.innerText        = "dim lights?";
+    text.innerHTML        = "<br />lights off?";
     localStorage.removeItem( "t-dark" );
 
   } else {
@@ -36,11 +45,11 @@ toggle.addEventListener( "click", function ( event ) {
 });
 
 /* =========================================================================================== */
-// Found at: https://www.creativebloq.com/inspiration/css-animation-examples
-// Part of my exploration of fun animation effects.
+// Found this idea at: https://www.creativebloq.com/inspiration/css-animation-examples
+// Part of my exploration of fun animation effects. 
 const moveableEl = document.getElementById("movable");
 
-let handleMouseMove = e => {
+handleMouseMove = e => {
   const height = window.innerHeight;
   const width = window.innerWidth;
   const yAxisDegree = e.pageX / width * 100 - 20;
@@ -49,31 +58,31 @@ let handleMouseMove = e => {
   moveableEl.style.transform = `rotateY(${yAxisDegree}deg) rotateX(${xAxisDegree}deg)`;
   // Set the sheen position
   setSheenPosition(e.pageX / width, e.pageY / width);
-}
+};
 
-function setSheenPosition(xRatio, yRatio) {
+setSheenPosition = (xRatio, yRatio) => {
  
   // This creates a "distance" up to 400px each direction to offset the sheen
   const xOffset = 1 - (xRatio - 0.5) * 800;
   const yOffset = 1 - (yRatio - 0.5) * 800;
  
-  moveableEl.style.setProperty('--sheenX', `${xOffset}px`);
-  moveableEl.style.setProperty('--sheenY', `${yOffset}px`);
-}
+  moveableEl.style.setProperty( '--sheenX', `${xOffset}px` );
+  moveableEl.style.setProperty( '--sheenY', `${yOffset}px` );
+};
 
-let clearCoOrdinates = () =>{
+clearCoOrdinates = () =>{
   const xReset = 0;
   const yReset = 0;
 
   moveableEl.style.transform = `rotateY(${yReset}deg) rotateX(${xReset}deg)`;
-}
+};
 
 /* =========================================================================================== */
 
 const aQuote       = document.getElementById("b-quote-me");
 let quotesCalled = []; 
 
-let quoteGenerator = () => {
+quoteGenerator = () => {
   // Running this once to avoid delay from the setInterval for the 1st run.
   // User should see a quote as quickly as possible from opening the page.
   
@@ -113,14 +122,48 @@ let quoteGenerator = () => {
       aQuote.innerHTML = html;
     }, 11000);
 
-    function randomSelection(min, max) {
+    randomSelection = (min, max) => {
       min = Math.ceil(min);
       max = Math.floor(max);
       //The maximum is inclusive and the minimum is inclusive
       return Math.floor(Math.random() * (max - min + 1) + min); 
-    }
-  }
+    };
+  };
 
  /* =========================================================================================== */
 
- quoteGenerator();
+const closeTip     = document.getElementById("close-me"),
+      tooltipLabel = document.getElementById("tooltip-label"),
+      logoHover    = document.getElementById("watson-logo");
+
+closeTip.addEventListener('click', event => {
+  tooltipLabel.style.visibility = "hidden";
+  closeTip.style.visibility = "hidden";
+  localStorage.setItem( "tooltip-off", true );
+});
+
+logoHover.addEventListener('mouseover', event => {
+  tooltipLabel.style.visibility = "visible"; 
+  closeTip.style.visibility = "hidden";
+});
+
+logoHover.addEventListener('mouseout', event => {
+  tooltipLabel.style.visibility = "hidden"; 
+});
+
+ /* =========================================================================================== */
+
+// Doing this to avoid the resume prompt every time the user opens the page - you only need it 
+// once.  I implemented this to be user friendly for mobile phone users.
+
+checkTooltipStatus = () => {
+  localStorage.getItem( "tooltip-off" ) ? tooltipLabel.style.visibility = "hidden" 
+                                        : console.log(`resume tooltip off`)
+};
+
+ /* =========================================================================================== */
+
+checkTooltipStatus();
+quoteGenerator();
+
+// ====================================================================================

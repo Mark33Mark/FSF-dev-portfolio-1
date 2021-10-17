@@ -1,9 +1,22 @@
+/*========================================================================================
+ *
+ *   Javascript 
+ *        - Script for contact.html
+ *        - This script handles the functionality of the email form.  It works.
+ *          I also got it to work on my host site using php.  Did not realise 
+ *          GitHub do not provide php at the time I was doing this.  Learning!
+ *           
+ *   File created: 14 October 2021
+ *   Created by:   Mark Watson
+ *
+ *=========================================================================================*/ 
+
 
 const contactForm = document.getElementById("contact-form");
 const submitLoader = document.getElementById("submit-loader");
 const messageWarning = document.getElementById("message-warning");
 const messageSuccess = document.getElementById("message-success");
-const formEndpoint   = 'https://formspree.io/f/mrgrvzqw';
+const formEndpoint   = 'https://formspree.io/f/mrgrvzqw';  // done due to GitHub not having php.
 
 submitLoader.style.opacity = 0;
 messageSuccess.style.opacity = 0;
@@ -11,12 +24,13 @@ messageSuccess.style.opacity = 0;
 contactForm.addEventListener('submit', function( event ) {
   event.preventDefault();
 
-  const formData = new FormData(this);  // creating a class from the form's data.
+  // creating a class from the form's data.
+  const formData = new FormData(this); 
 
   // fade in
   fadeIn(submitLoader, 1500);
 
-//fetch('sendEmail.php', {
+  //fetch('sendEmail.php', {   <= if I move this site to my host then I'll switch this on.
   fetch(formEndpoint, {
       method: 'post',
       mode: "no-cors",
@@ -37,9 +51,15 @@ contactForm.addEventListener('submit', function( event ) {
       messageWarning.innerHTML(error);
       fadeIn(messageWarning, 1000);
       console.error(error);
-    })
+    });
 });
 
+// ====================================================================================
+
+// I didn't want to use jQuery or CSS for fading in and out.  Thought it would be easy
+// in JavaScript... I was wrong.  Ended up finding a site that talks about the need for
+// fading in to be measured against a clock - it works but a lot more complicated than 
+// I initially thought in my head.
 
  /* Fade-out function
     https://dev.to/bmsvieira/vanilla-js-fadein-out-2a6o
@@ -77,3 +97,4 @@ let fadeIn = (el, time, display) => {
   tick();
 };
 
+// ====================================================================================
