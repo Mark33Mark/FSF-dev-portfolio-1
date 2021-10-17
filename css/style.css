@@ -1065,6 +1065,7 @@ dd a {
     height: 100%;
     min-height: 100vh;
     border: 1.25rem solid var(--royal-blue) !important;
+    border-radius: 2rem;
     position: relative;
   }
 
