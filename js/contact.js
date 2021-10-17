@@ -64,7 +64,7 @@ contactForm.addEventListener('submit', function( event ) {
  /* Fade-out function
     https://dev.to/bmsvieira/vanilla-js-fadein-out-2a6o
  */
- let fadeOut = el => {
+ fadeOut = el => {
 
   el.style.opacity = 1;
 
@@ -80,7 +80,7 @@ contactForm.addEventListener('submit', function( event ) {
  /* Fade-in function
     https://dev.to/bmsvieira/vanilla-js-fadein-out-2a6o
  */
-let fadeIn = (el, time, display) => {
+fadeIn = (el, time, display) => {
   
   el.style.opacity = 0;
   el.style.display = display || "block";
