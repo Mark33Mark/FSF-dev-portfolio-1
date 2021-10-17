@@ -53,14 +53,19 @@
 <body class="l-body">
   <div class="l-wrapper">
     <header class="b-site-header works-header">
-      <a class="b-logo" href="doc/resume_MarkWatson.pdf" target="_blank"><img src="img/Logo.svg" /></a>
+      <a id = "watson-logo" class="b-logo" href="doc/resume_MarkWatson.pdf" target="_blank"><img src="img/Logo.svg" /></a>
+        
+      <div class="tooltip">
+        <span id = "tooltip-label" class="tooltiptext">Click on the logo for my resume. <span id="close-me" class = "icon-cross"></span></span>
+      </div>
+
       <nav class="b-site-nav">
         <a class="b-site-nav__link" href="./index.html">About</a>
         <a class="b-site-nav__link" href="./works.html">Works</a>
         <a class="b-site-nav__link" href="./contact.html">Contact</a>
 
         <button class="b-site--theme-control b-icon icon-sun" id="theme-control">
-          <span class="b-site--theme-text">dim lights?</span>
+          <span class="b-site--theme-text"><br />lights off?</span>
         </button>
 
       </nav>
@@ -70,6 +75,8 @@
     <main role="main" class="l-main b-page">
 
       <h1 class="b-page__title">Selected Work</h1>
+      <p> Click on one of the cards below to see more information about the project.
+      </p>
 
         <ul class = "project-board">
           <li class="project-card recipe">
@@ -92,11 +99,13 @@
           </li>   
         </ul>
 
+      <!-- == Card Content ================================================================================================== -->
+
       <div class="b-page__content"> 
 
         <article id="lettuce-eat" class="b-work">
           <header class="b-work__header">
-            <h2 class="b-work__title">lettuce.eat</h2>  
+            <h2 id="recipe-title" class="b-work__title">lettuce.eat</h2>  
             <ul class="b-tags-list">  
               <li class="b-tag">agile-teams</li>
               <li class="b-tag">git-branching</li>
@@ -108,11 +117,19 @@
             </ul>  
           </header>
           <div class="b-work__content">
-            <p>Worked in agile team environment as a group of 4 developers.  Together we needed to agree an application
-                concept that uses 2 api's that returns data for the application.
+            <a class = "gallery-links" href="https://github.com/Mark33Mark/recipe-generator" target = "_blank">
+              <i id= "recipe-github" class = "gallery-icon icon-SVG_github_repo"></i>
+            </a>
+            <span><a class = "gallery-links" href="https://eat.watsonised.com/" target = "_blank">
+                <i id= "recipe-webpage" class = "gallery-icon icon-SVG_myWebpage"></i>
+              </a>
+            </span>
+            <div class = "helpful-tip"></div>
+            <p> Developed as part of a team where we adopted agile team processes.  Initially we needed to agree an application
+                concept that used 2 api's to return data for the application.
             </p>
             <p>We agreed to develop a minimalist recipe application that finds recipes based on 1 key ingredient
-              the user wants in the dish.
+              the user wants in their dish.
             </p>
             <p>What I did:</p>
             <ul>
@@ -128,7 +145,7 @@
 
         <article id="weather-dashboard" class="b-work">
           <header class="b-work__header">
-            <h2 class="b-work__title">weather dashboard</h2>  
+            <h2 id="weather-title" class="b-work__title">weather dashboard</h2>  
             <ul class="b-tags-list">  
               <li class="b-tag">javaScript</li>
               <li class="b-tag">fetch-api</li>
@@ -138,17 +155,27 @@
             </ul>  
           </header>
           <div class="b-work__content">
-            <p> Requested to develop a weather dashboard that uses the OpenWeather API to allow user's to 
-                search cities around the world.  It was required to provide the user with the ability to 
-                store the cities they searched in the browser's local storage.  Wind, UV rating and an icon 
-                to depict the weather condition was all implemented.
+            <a class = "gallery-links" href="https://github.com/Mark33Mark/weather-dashboard" target = "_blank">
+              <i id= "weather-github" class = "gallery-icon icon-SVG_github_repo"></i>
+            </a>
+            <span>
+              <a class = "gallery-links" href="https://sun.watsonised.com/" target = "_blank">
+                <i id= "weather-webpage" class = "gallery-icon icon-SVG_myWebpage"></i>
+              </a>
+            </span>
+            <div class = "helpful-tip"></div>
+            <p> A weather dashboard that uses the OpenWeather API to allow user's to 
+                search cities around the world.  Built from concept. The application was developed to provide 
+                the user with the ability to store the searched cities in their browser's local storage.  Included UI/UX 
+                design initiatives like having wind speed, UV rating and an icons all coded in JavaScript to use colours
+                and pictures for convenient identification of weather conditions.
             </p>
-            <p> In addition to the current day's weather, a 5 day forecast was also provided.  Icons to quickly
-                depict the forecast weather condition were also provided.
+            <p> In addition to the current day's weather, a 7 day forecast was also provided, including icons to quickly
+                know the forecast weather condition for the coming days.
             </p>
             <p>What I did:</p>
             <ul>
-              <li>Built the application from concept.  Wireframed and pseudo coded first.</li>
+              <li>Built the application from concept, including wireframing and pseudo code.</li>
               <li>Developed the application as responsive to work on all screen sizes.</li>
               <li>Designed and implemented a banner to show pictures based on the given weather condition for the particular day.</li>
               <li>Added a feature for users to easily delete their stored cities from the memory without losing 
@@ -160,7 +187,7 @@
                 
         <article id="code-quiz" class="b-work">
           <header class="b-work__header">
-            <h2 class="b-work__title">code quiz</h2>  
+            <h2 id="quiz-title" class="b-work__title">code quiz</h2>  
             <ul class="b-tags-list">  
               <li class="b-tag">javaScript</li>
               <li class="b-tag">css</li>
@@ -168,6 +195,15 @@
             </ul>  
           </header>
           <div class="b-work__content">
+            <a class = "gallery-links" href="https://github.com/Mark33Mark/code-quiz_webAPI" target = "_blank">
+              <i id= "quiz-github" class = "gallery-icon icon-SVG_github_repo"></i>
+            </a>
+            <span>
+              <a class = "gallery-links" href="https://quiz.watsonised.com/" target = "_blank">
+                <i id= "quiz-webpage" class = "gallery-icon icon-SVG_myWebpage"></i>
+              </a>
+          </span>
+          <div class = "helpful-tip"></div>
             <p> Using JavaScript I designed and coded a JavaScript quiz.
             </p>
             <p> The quiz is against the clock with time penalties if questions are answered incorrectly.  
@@ -175,10 +211,10 @@
             </p>
             <p>What I did:</p>
             <ul>
-              <li>Built the application from concept.  Wireframed and pseudo coded first.</li>
+              <li>Built the application from concept using wireframing and pseudo code to get the broad structure.</li>
               <li>I implemented a number of user features to make the quiz more fun, such as a countdown that 
-                  loses 10 seconds when a user selects the wrong answer</li>
-              <li>included a countdown bar that then turns into a progress bar.</li>
+                  loses 10 seconds when a user selects the wrong answer.</li>
+              <li>Added a countdown bar that then turns into a progress bar.</li>
             </ul>            
           </div>     
           <footer class="b-work__footer"></footer>
@@ -186,7 +222,7 @@
 
         <article id="workday-scheduler" class="b-work">
           <header class="b-work__header">
-            <h2 class="b-work__title">workday scheduler</h2>  
+            <h2 id="workday-title" class="b-work__title">workday scheduler</h2>  
             <ul class="b-tags-list">  
               <li class="b-tag">javaScript</li>
               <li class="b-tag">css</li>
@@ -194,6 +230,15 @@
             </ul>  
           </header>
           <div class="b-work__content">
+            <a class = "gallery-links" href="https://github.com/Mark33Mark/workday-scheduler" target = "_blank">
+              <i id= "workday-github" class = "gallery-icon icon-SVG_github_repo"></i>
+            </a>
+            <span>
+              <a class = "gallery-links" href="https://task.watsonised.com/" target = "_blank">
+                <i id= "workday-webpage" class = "gallery-icon icon-SVG_myWebpage"></i>
+              </a>
+            </span>
+            <div class = "helpful-tip"></div>
             <p> A simple application built from scratch that allows user's to select a work day time bandwidth 
                 and set out their tasks for the day.
             </p>
@@ -211,32 +256,34 @@
       </div>
     </main>
 
+    <!-- == Contacts footer ================================================================================================== -->
+
     <section class="b-social__container">
       <address class="b-social-network" itemscope itemtype="http://schema.org/LocalBusiness"> 
-          <a href="tel:+61448488884">
+          <a class = "contact-links" href="tel:+61448488884">
             <div class="b-contact-icons icon-mobile-phone"></div>
           </a>
 
-        <a  href="mailto:hi@watsonised.com?subject=Sending%20you%20this%20email%20from%20your%20website&body=Hi%20Mark,%20I'm%20emailing%20you%20from%20your%20website." 
+        <a  class = "contact-links" href="mailto:hi@watsonised.com?subject=Sending%20you%20this%20email%20from%20your%20website&body=Hi%20Mark,%20I'm%20emailing%20you%20from%20your%20website." 
             aria-label="send me an email by selecting this icon">
-          <div class="b-contact-icons icon-SVG_Envelope_tight" style="font-size: 3rem;"></div>
+          <div class="b-contact-icons icon-SVG_Envelope"></div>
         </a>
             
-        <a href="https://www.linkedin.com/in/mark-watsonised/" target="_blank" aria-label="have a look at my LinkedIn message and contact me by selecting this icon">
+        <a class = "contact-links" href="https://www.linkedin.com/in/mark-watsonised/" target="_blank" aria-label="have a look at my LinkedIn message and contact me by selecting this icon">
           <div class="b-contact-icons icon-SVG_Linkedin"></div>
         </a>
           
-        <a  href="https://wa.me/61448488884?text=Hi%20Mark,%0DI%20found%20you%20via%20your%20website%20and%20was%20wondering%0D" 
+        <a  class = "contact-links" href="https://wa.me/61448488884?text=Hi%20Mark,%0DI%20found%20you%20via%20your%20website%20and%20was%20wondering%0D" 
             target="_blank" aria-label="send me a whatsapp message by selecting this icon">
           <div class="b-contact-icons icon-SVG_Whatsapp"></div>
         </a>  <!--https://faq.whatsapp.com/general/chats/how-to-use-click-to-chat-->
 
-        <a href="https://t.me/watsonised" target="_blank" aria-label="send me a Telegram message by selecting this icon">
+        <a class = "contact-links" href="https://t.me/watsonised" target="_blank" aria-label="send me a Telegram message by selecting this icon">
           <div class="b-contact-icons icon-SVG_PaperPlane"></div>
         </a>
 
-        <a href="https://github.com/Mark33Mark" target="_blank" aria-label="have a look at my Github repository by selecting this icon">
-          <div class="b-contact-icons icon-SVG_Github" style="font-size: 5.5rem;"></div>
+        <a class = "contact-links" href="https://github.com/Mark33Mark" target="_blank" aria-label="have a look at my Github repository by selecting this icon">
+          <div class="b-contact-icons icon-SVG_Github"></div>
         </a> 
       </address>
     </section>

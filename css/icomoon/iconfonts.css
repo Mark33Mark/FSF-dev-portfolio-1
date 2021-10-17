@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('icomoon.eot?ox8add');
-  src:  url('icomoon.eot?ox8add#iefix') format('embedded-opentype'),
-    url('icomoon.ttf?ox8add') format('truetype'),
-    url('icomoon.woff?ox8add') format('woff'),
-    url('icomoon.svg?ox8add#icomoon') format('svg');
+  src:  url('icomoon.eot?p1osy1');
+  src:  url('icomoon.eot?p1osy1#iefix') format('embedded-opentype'),
+    url('icomoon.ttf?p1osy1') format('truetype'),
+    url('icomoon.woff?p1osy1') format('woff'),
+    url('icomoon.svg?p1osy1#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,8 +25,14 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-SVG_myWebpage:before {
+  content: "\e917";
+}
+.icon-SVG_github_repo:before {
+  content: "\e918";
+}
 .icon-SVG_Envelope_tight:before {
-  content: "\e903";
+  content: "\e919";
 }
 .icon-mobile-phone:before {
   content: "\e916";
@@ -66,6 +72,9 @@
 }
 .icon-SVG_briefcase:before {
   content: "\e902";
+}
+.icon-SVG_Envelope:before {
+  content: "\e903";
 }
 .icon-SVG_Github:before {
   content: "\e904";
