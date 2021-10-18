@@ -23,10 +23,10 @@
 **Why this project?**  
 * To find employment it is essential to have a good portfolio of professional materials to demonstrates my capability as a developer. 
 
-![landing page](./img/FSF_Webpage_landing.jpg)
-![gallery](./img/FSF_Webpage_gallery.jpg)
-![contact](./img/FSF_Webpage_contact.jpg)
-![night switch](./img/FSF_Webpage_gallery_inverted.jpg)
+![landing page](./img/FSF_webpage_landing.jpeg)
+![gallery](./img/FSF_webpage_gallery.jpeg)
+![contact](./img/FSF_webpage_contact.jpeg)
+![night switch](./img/FSF_webpage_gallery_inverted.jpeg)
 
 **What problem does this project solve?**  
 * Provides a polished mobile responsive website to canvas my capability with links to my Github and LinkedIn for potential employers to consider me for a job.

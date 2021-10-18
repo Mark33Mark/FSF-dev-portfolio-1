@@ -409,6 +409,11 @@ textarea {
 blockquote{
   margin: 0;
   font-style: italic;
+  font-size: 1.2rem;
+}
+
+.quote-by{
+  font-style: normal;
   font-size: 1rem;
 }
 
@@ -565,14 +570,20 @@ dd a {
 }
 
 .animate-fading {
-  animation: fading 10s infinite;
+  animation: fading 14s infinite;
 }
 
 @keyframes fading {
   0% {
     opacity: 0;
   }
+  15% {
+    opacity: 1;
+  }
   50% {
+    opacity: 1;
+  }
+  85% {
     opacity: 1;
   }
   100% {
@@ -848,7 +859,7 @@ dd a {
 }
 
 .card {
-  background-color: rgba(100, 165, 255, 0.399);
+  background-color: rgba(100, 165, 255, 0.29);
   box-shadow: 0 0 3rem 0.5rem rgba(100,165,255,.5);
   position: relative;
   height: 10rem;
@@ -1049,7 +1060,7 @@ dd a {
   }
 
   .card {
-    background-color: rgba(100, 165, 255, 0.399);
+    background-color: rgba(100, 165, 255, 0.29);
   }
 
   .b-site--theme-text {

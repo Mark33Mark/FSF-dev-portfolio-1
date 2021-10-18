@@ -104,8 +104,8 @@ quoteGenerator = () => {
 
           console.log(`Random number returned = ${selectedQuote}`);
 
-          let html = `<blockquote class="b-vertical-centre animate-fading">"${data[selectedQuote].text}
-          <br />quoting: ${data[selectedQuote].author}</blockquote>`;
+          let html = `<blockquote class="b-vertical-centre animate-fading">"${data[selectedQuote].text}"
+          <br /><span class="quote-by"><strong>quoting:</strong> ${quotesCalled[selectedQuote].author}</span></blockquote>`;
           aQuote.innerHTML = html;
 
         });
@@ -118,9 +118,9 @@ quoteGenerator = () => {
       let selectedQuote = randomSelection( 0, availableQuotes );
 
       let html = `<blockquote class="b-vertical-centre animate-fading">"${quotesCalled[selectedQuote].text}"
-      <br />quoting: ${quotesCalled[selectedQuote].author}</blockquote>`;
+      <br /><span class="quote-by"><strong>quoting:</strong> ${quotesCalled[selectedQuote].author}</span></blockquote>`;
       aQuote.innerHTML = html;
-    }, 11000);
+    }, 14000);  // align this setting with the CSS fade, line 567 of the style.css file.
 
     randomSelection = (min, max) => {
       min = Math.ceil(min);
@@ -160,6 +160,7 @@ checkTooltipStatus = () => {
   localStorage.getItem( "tooltip-off" ) ? tooltipLabel.style.visibility = "hidden" 
                                         : console.log(`resume tooltip off`)
 };
+
 
  /* =========================================================================================== */
 

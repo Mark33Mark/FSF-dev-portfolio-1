@@ -86,6 +86,7 @@ fadeIn = (el, time, display) => {
   el.style.display = display || "block";
   
   let last = +new Date();
+  
   let tick = function() {
     el.style.opacity = +el.style.opacity + (new Date() - last) / time;
     last = +new Date();
