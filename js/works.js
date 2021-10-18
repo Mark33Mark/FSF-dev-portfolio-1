@@ -83,9 +83,9 @@ showCard = ( theID ) => {
 
 loadHTML = () => {
     for (let i = 0; i < helpfulTip.length; i++) {
-        helpfulTip[i].innerHTML =  `🔼 Please select the GitHub icon for the <strong>application's 
-                                    <strong>repository</strong> or the Webpage icon for the 
-                                    <strong>deployed application's website</strong>.<hr>`;
+        helpfulTip[i].innerHTML =  `🔼 Click the GitHub icon for the <strong>application's 
+        repository</strong> or the Webpage icon for the <strong>deployed application's 
+        website</strong>.<hr>`;
     }
 };
 
