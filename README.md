@@ -57,7 +57,7 @@ Client requested features as implemented:
 ---
 ### 3. Installation  
 You can download the source code from [my Github repository](https://github.com/Mark33Mark/FSF-developer-portfolio)  and open the index.html file to review the website inside your selected web browser.  
-Alternatively, the webpage has also been hosted via [URL: job.watsonised.com](https://hire.watsonised.com)
+Alternatively, the webpage has also been hosted via [URL: hire.watsonised.com](https://hire.watsonised.com)
 
 ---
 ### 4. Usage  
@@ -75,7 +75,7 @@ Also huge gratitude to all those souls that provide walkthroughs / how-to's / an
 ### 6. License  
  The works in this repository are subject to:  
 
-[![GitHub](https://img.shields.io/github/license/Mark33Mark/my-portfolio)](docs/LICENSE.md)
+[![GitHub](https://img.shields.io/github/license/Mark33Mark/my-portfolio)](doc/LICENSE.md)
 
 ---
 ### 7. Github repo status  
@@ -103,7 +103,7 @@ Also huge gratitude to all those souls that provide walkthroughs / how-to's / an
 * [x]  Updated portfolio webpage with links to my GitHub and LinkedIn profiles.
 * [x]  Webpage has a link for users to download a pdf version of my resume.
 * [x]  Webpage showcases at least 2 examples from my bootcamp student work.  Each example includes a project title, link to deployed version, link to the GitHub repository and a screenshot of the application.
-* [x]  Webpage has a polished and mobile-responsive user interface. [URL: job.watsonised.com](https://hire.watsonised.com)
+* [x]  Webpage has a polished and mobile-responsive user interface. [URL: hire.watsonised.com](https://hire.watsonised.com)
 * [x]  Webpage is designed as 'mobile-first', has a color palette that doesn't use default CSS framwork's colours and has a styled expression;
 * [x]  Webpage fonts and colours selected are not to cause eye strain.
 * [x]  GitHub page has a profile picture or avatar, biography, email address, link to deployed my deployed portfolio page and at least 2 pinned repositories.
