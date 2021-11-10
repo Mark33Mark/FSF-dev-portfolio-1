@@ -120,6 +120,7 @@ Also huge gratitude to all those souls that provide walkthroughs / how-to's / an
 * [x]  Repsository follows best practices for class/id naming conventions, indentation, quality comments, etc.
 * [x]  Repository contains multiple descriptive commit messages.
 * [x]  Repository contains a README file with descriptio, screenshot and link to deployed application.
+
 ---
 
 - [Back to the top](#usyd-fsf-week8-project)
